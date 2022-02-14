@@ -1,0 +1,40 @@
+extends layout/main.pug 
+
+block vista 
+    style.
+        .table td, .table th {
+            vertical-align: middle;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        hr {
+            background-color: #ddd;
+        }
+
+        .jumbotron {
+            min-height: 100vh;
+        }
+
+    div(class="jumbotron")
+
+        h1='Lista de Productos'
+        br
+        if products.length
+            div(class="table-responsive")
+                table(class="table table-dark")
+                    tr
+                        th='Product'
+                        th='Price'
+                        th='Icon'
+                    each product in products
+                        tr
+                            td=product.title
+                            td=product.price
+                            td
+                                img(width=50 src=product.thumbnail)
+        else
+            h3(class="alert alert-warning")='No se encontraron productos'
+        a(class="btn btn-primary" href="/")='Go to Form'

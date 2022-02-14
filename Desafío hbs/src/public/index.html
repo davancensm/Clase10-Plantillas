@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de ingreso de Produto</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron">
+    <h1>Ingrese el producto</h1>
+        <form action="./productos" method="POST">
+            <div class="form-group">
+                <label for="title">Name of product</label>
+                <input type="text" name="title" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" name="price" required>
+            </div>    
+            
+            <div class="form-group">
+                <label for="thumbnail">Thumbnail URL</label>
+                <input type="url" name="thumbnail" required>
+            </div>
+            <button class="btn btn-success mt-3" type="submit">Load Product</button>
+        </form>
+
+        <a class="btn btn-primary" href="./productos">Go to List.</a>
+    </div>
+</body>
+</html>
